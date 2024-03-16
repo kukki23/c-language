@@ -1,0 +1,75 @@
+
+
+//1.) C program to find the row and column of a num
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int rows, columns, number, row = 1, col = 1;
+    bool fond=false;
+
+    printf("Enter the number of rows and columns  : ");
+    scanf("%d %d", &rows, &columns);
+
+    int matrix[row][columns];
+    printf("Enter the elements of the matrix:\n");
+  for(int i=0;i<=rows-1;i++){
+    for(int j=0;j<=columns-1;j++){
+      printf("enter the element of %d row and %d column:",i+1,j+1);
+      scanf("%d",&matrix[i][j]);
+    }
+  } 
+printf("enter a number to find: ");
+  scanf("%d",&number);
+ 
+     
+    for(int i=0;i<=rows-1;i++){
+      for(int j=0;j<=columns-1;j++){
+        if(matrix[i][j]==number)
+        {
+          printf("fond at %d row and %d column\n",i+1,j+1);
+          fond =true;
+          break;
+        }
+        
+      }
+    }
+    if(!fond ){
+        printf("not fond");
+    }
+	
+	
+	2.) C Program to Read a Matrix and find Sum and Product of all elements
+	
+	
+	
+	#include<stdio.h>
+int main(){
+  int row;
+  int columns;
+ // int matrics[][];
+  int sum=0;
+  int product=1;
+  printf("enter the row and columns");
+  scanf("%d%d",&row,&columns);
+  int matrics[row][columns];
+  for(int i=0;i<=row-1;i++){
+    for(int j=0;j<=columns-1;j++){
+      printf("enter the elements of row %d and columns %d : ",i+1,j+1);
+      scanf("%d",&matrics[i][j]);
+    }
+  }
+  ////printf("enter the to find the sum of the product and sum");
+    //scanf("%d%d",&product,&sum);
+  for(int i=0;i<=row-1;i++){
+    for(int j=0;j<=columns-1;j++){
+      product*=matrics[i][j];
+      sum+=matrics[i][j];
+    }
+}printf("product of the matrics is %d \n",product);
+  printf("sum of the matrics is %d ",sum);
+}ber in matrix.
+
+	
